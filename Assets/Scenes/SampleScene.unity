@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeTransform: {fileID: 365342724}
+  speed: 30
 --- !u!1 &454065607
 GameObject:
   m_ObjectHideFlags: 0
