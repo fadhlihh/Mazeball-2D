@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class MazeRotation : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Atribut SerializeField untuk memunculkan variable di inspector
+    [SerializeField]
+    private Transform mazeTransform; // Membuat variable mazeTransform untuk menyimpan komponen Transform dari maze
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Jika input 'A' ditekan
         if (Input.GetKey(KeyCode.A))
         {
-            // Maka munculkan log "putar maze ke kiri"
-            Debug.Log("Putar maze ke kiri");
+            // Memutar maze di sumbu z sebesar 50 derajat tiap detik ke arah kiri
+            mazeTransform.Rotate(0, 0, 50 * Time.deltaTime);
         }
         // Jika input 'D' ditekan
         if (Input.GetKey(KeyCode.D))
         {
-            // Maka munculkan log "putar maze ke kanan"
-            Debug.Log("Putar maze ke kanan");
+            // Memutar maze di sumbu z sebesar 50 derajat tiap detik ke arah kanan
+            mazeTransform.Rotate(0, 0, -50 * Time.deltaTime);
         }
     }
 }
