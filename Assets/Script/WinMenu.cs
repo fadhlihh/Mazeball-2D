@@ -8,12 +8,13 @@ public class WinMenu : MonoBehaviour
     public void Retry()
     {
         // Mengulang permainan
-        Debug.Log("Retry");
+        // Membuka scene maze
+        SceneManager.LoadScene("Maze");
     }
 
     public void Exit()
     {
         // Keluar Permainan
-        Debug.Log("Exit");
+        Application.Quit();
     }
 }

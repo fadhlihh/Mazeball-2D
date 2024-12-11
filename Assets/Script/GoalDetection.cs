@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoalDetection : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class GoalDetection : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            Debug.Log("Win");
+            SceneManager.LoadScene("WinMenu");
         }
     }
 }
